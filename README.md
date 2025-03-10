@@ -1,0 +1,1 @@
+# Land-Type-Classification-using-Sentinel-2-Satellite-Images
