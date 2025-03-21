@@ -1,5 +1,5 @@
 # Land-Type-Classification-using-Sentinel-2-Satellite-Images
-## 📌 Project Overview
+## Project Overview
 This project aims to classify different land types using **Sentinel-2 satellite images** and **deep 
 learning techniques**. By analyzing RGB satellite imagery, we can accurately identify various 
 land cover types, such as forests, water bodies, urban areas, and agricultural land. This 
@@ -7,7 +7,7 @@ classification can help in environmental monitoring, urban planning, and sustain
 management. Our model will be trained using **Convolutional Neural Networks (CNNs)** and 
 pretrained architectures to achieve high accuracy and robustness.
 
-## 🎯 Project Objectives
+## Project Objectives
 • **Environmental Monitoring:** Tracks land cover changes over time, aiding in deforestation detection, climate change analysis, and natural disaster assessment.
 
 • **Urban Planning:** Helps city planners analyze urban expansion and optimize land use for sustainable infrastructure development.
@@ -18,7 +18,7 @@ pretrained architectures to achieve high accuracy and robustness.
 
 • **Automation and Efficiency:** Reduces manual effort and enhances accuracy in land classification, enabling large-scale and cost-effective analysis.
 
-## 👥 Team Members
+## Team Members
 **1. Dr/** [Mohamed Elsayed Nassar](https://github.com/Mohamed-Nassar88)
 
 **2. Dr/** [Amal Adel Sheta](https://github.com/DrAmalSheta)
@@ -29,33 +29,87 @@ pretrained architectures to achieve high accuracy and robustness.
 
 **5. Eng/** [Salma Adel Saleh](https://github.com/salmadel)
 
-## 📂 Dataset
-For this project, we utilize a curated dataset of Sentinel-2 Satellite Imagery to classify different land types. The dataset consists of 27,000 images with labeled land cover categories, supporting the development of an accurate and efficient classification model.
+## Dataset
+• **Source:** Sentinel-2 RGB satellite images
 
 • **Total Images:** 27,000
 
-• **Image Resolution:** 64x64 pixels
+• **Image Resolution:** 64x64 pixels (RGB)
 
-• **Channels:** RGB (3 channels)
+• **Classes (10):** Forest, Residential, Herbaceous Vegetation, Sea Lake, Annual Crop, Industrial, River, Highway, Permanent Crop, Pasture
 
-• **Classes (10 Land Types):**
+• **Balanced Distribution:** No corrupt or duplicated images
 
-     1. Forest
-     
-     2. Residential
-     
-     3. Herbaceous Vegetation
-     
-     4. Sea-Lake
-     
-     5. Annual Crop
-     
-     6. Industrial
-     
-     7. River
-     
-     8. Highway
-     
-     9. Permanent Crop
-     
-     10. Pasture
+• [Dataset Link](https://www.kaggle.com/datasets/salmaadell/eurosat-rgb)
+
+• **Image Samples:**
+![download (5)](https://github.com/user-attachments/assets/76a77590-77a7-4f5d-8124-35e1ae293458)
+
+
+## Project Workflow
+**1. Data Collection & Exploration**
+
+• Collected Sentinel-2 satellite images and analyzed class distribution.
+
+• Used EDA to visualize patterns and dataset characteristics.
+
+**2. Data Preprocessing**
+
+• Split data (Train 70%, Validation 10%, Test 20%).
+
+• Normalized pixel values and applied data augmentation.
+
+• Resized images to 64×64 pixels.
+
+**3. Model Development & Training**
+
+• Built and trained multiple CNN models with regularization.
+
+• Trained using the Adam optimizer with categorical cross-entropy loss and early stopping.
+
+• Selected the best-performing model based on accuracy and F1-score.
+
+**4. Model Deployment**
+
+• Integrated the trained model into a Flask-based web app.
+
+• Designed an interactive UI with HTML, CSS, and JavaScript.
+
+## Used Technologies
+**1. Programming Languages & Frameworks**
+
+• **Python:** Used for data preprocessing, model training, and backend development.
+
+• **Flask:** Lightweight web framework for deploying the CNN model.
+
+• **JavaScript, HTML, CSS:** Used for frontend development and UI design.
+
+**2. Libraries & Tools**
+
+• **TensorFlow/Keras:** Deep learning framework for model development.
+
+• **OpenCV:** Image processing and manipulation.
+
+• **NumPy & Pandas:** Data handling and analysis.
+
+• **Seaborn & Matplotlib:** Data visualization and exploratory analysis.
+
+## Results
+After extensive training and evaluation, the best-performing model achieved:
+
+• **Test Accuracy:** 97.09%
+
+• **Loss:** 0.03
+
+• **Precision, Recall, F1-Score:** ~97% across all metrics
+
+![best normalize cm](https://github.com/user-attachments/assets/104b7945-5c49-4957-a51c-f40d96bd71c2)
+![best curves](https://github.com/user-attachments/assets/78bc3a9e-d126-4399-8738-17848d72f699)
+
+
+## User Interface Test
+
+
+https://github.com/user-attachments/assets/c38777a2-b723-4c48-866e-ab4891ab5278
+
+
