@@ -40,7 +40,7 @@ pretrained architectures to achieve high accuracy and robustness.
 
 • **Balanced Distribution:** No corrupt or duplicated images
 
-• [Dataset Link](https://www.kaggle.com/datasets/salmaadell/eurosat-rgb)
+• [Dataset Link](https://zenodo.org/records/7711810#.ZAm3k-zMKEA)
 
 • **Image Samples:**
 ![download (5)](https://github.com/user-attachments/assets/76a77590-77a7-4f5d-8124-35e1ae293458)
@@ -106,6 +106,9 @@ After extensive training and evaluation, the best-performing model achieved:
 ![best normalize cm](https://github.com/user-attachments/assets/104b7945-5c49-4957-a51c-f40d96bd71c2)
 ![best curves](https://github.com/user-attachments/assets/78bc3a9e-d126-4399-8738-17848d72f699)
 
+## License
+
+The dataset is licensed under the MIT license. In general, Sentinel data is free and open to the public under EU law. Please consider the [Copernicus Sentinel Data Terms and Conditions](https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice) when using Copernicus Sentinel data.
 
 ## User Interface Test
 
