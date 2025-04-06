@@ -1,0 +1,311 @@
+<!-- General structure -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head section -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoLens</title>
+    <style>
+        
+        /* Page background & text styling */
+        body {
+            background-color: #EDE2C7;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Main container styling */
+        .container {
+            background-color: white;
+            width: 80%;
+            margin: 50px auto;
+            padding: 40px;
+            border-radius: 30px;
+            position: relative;
+        }
+
+        /* Titles styling */
+        h1 {
+            color: #6B3F1D;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #6B3F1D;
+            margin-bottom: 15px;
+        }
+
+        /* Text styling */
+        p {
+            color: #6B3F1D;
+            font-size: 20px;
+            margin: 100px;
+            line-height: 1.5;
+        }
+
+        /* Category section layout */
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin: 30px auto;
+            width: fit-content;
+            margin-bottom: 100;
+        }
+
+        /* Buttons styling */
+        .category {
+            background-color: #7A4E2D;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 12px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            min-width: 180px;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Button hover effect */
+        .category:hover {
+            background-color: #5A3520;
+        }
+
+        /* Instruction styling */
+        .instruction {
+            font-size: 18px;
+            color: #6B3F1D;
+            margin-top: -10px;
+            margin-bottom: 40px;
+        }
+
+        /* Description styling */
+        .description {
+            display: none;
+            background-color: #ffffff;
+            color: #5A3520;
+            font-size: 14px;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        /* File upload section styling */
+        .upload-section {
+            margin-top: 100px;
+        }
+
+        .upload-btn {
+            border: 2px solid #EDE2C7;
+            color: #6B3F1D;
+            background-color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            display: inline-block;
+        }
+
+        .upload-btn:hover {
+            background-color: #EDE2C7;
+        }
+
+        /* Hiding default file input button */
+        #file-input {
+            display: none;
+        }
+
+        /* Displaying image & prediction */
+        .image-prediction-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 150px;
+            margin-top: 40px;
+        }
+
+        /* Image preview styling */
+        .image-preview {
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+            border: 2px solid #C3B091;
+            display: none;
+            object-fit: cover;
+        }
+
+        /* Prediction text styling */
+        .prediction {
+            font-size: 20px;
+            font-weight: bold;
+            color: #6B3F1D;
+            display: none;
+            text-align: center;
+            margin-top: -15px;
+        }
+
+        /* Prediction result styling */
+        .prediction span {
+            display: block;
+            font-size: 26px;
+            font-weight: bold;
+            color: #5A3520;
+            margin-bottom: 15px; 
+            margin-top: 25px;    
+        }
+
+        .prediction p {
+            font-size: 20px;
+            color: #6B3F1D;
+            margin: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Main container -->
+    <div class="container">
+
+        <!-- Title & description-->
+        <h1>GeoLens</h1>
+        <h2>Smart Land Discovery with AI</h2>
+        <p>GeoLens is an AI-powered platform that analyzes satellite images to classify land types with high accuracy.
+            It transforms raw satellite data into actionable insights for agriculture, urban planning, and environmental
+            monitoring, making geospatial analysis smarter and more accessible.</p>
+
+        <!-- Land types section -->
+        <h2>Land Types</h2>
+        <p class="instruction">Click on a type to see the description</p>
+
+        <!-- Land type categories -->
+        <div class="categories">
+            <div class="category" onclick="toggleDescription(0)">Forest
+                <div class="description">Areas covered with dense trees and vegetation.</div>
+            </div>
+            <div class="category" onclick="toggleDescription(1)">Residential
+                <div class="description">Areas with houses and living communities.</div>
+            </div>
+            <div class="category" onclick="toggleDescription(2)">Industrial
+                <div class="description">Zones used for factories and production.</div>
+            </div>
+            <div class="category" onclick="toggleDescription(3)">River
+                <div class="description">Natural flowing water bodies.</div>
+            </div>
+            <div class="category" onclick="toggleDescription(4)">Herbaceous Vegetation
+                <div class="description">Lands covered with small plants and shrubs.</div>
+            </div>
+            <div class="category" onclick="toggleDescription(5)">Highway
+                <div class="description">Main roads used for transportation.</div>
+            </div>
+            <div class="category" onclick="toggleDescription(6)">Sea/Lake
+                <div class="description">Large water bodies, either salt or fresh water.</div>
+            </div>
+            <div class="category" onclick="toggleDescription(7)">Permanent Crop
+                <div class="description">Lands used for long-term crops like fruit trees.</div>
+            </div>
+            <div class="category" onclick="toggleDescription(8)">Annual Crop
+                <div class="description">Fields used for seasonal crops like wheat.</div>
+            </div>
+            <div class="category" onclick="toggleDescription(9)">Pasture
+                <div class="description">Grasslands used for grazing animals.</div>
+            </div>
+        </div>
+
+        <!-- Image upload section -->
+        <div class="upload-section">
+            <label for="file-input" class="upload-btn">Upload an Image</label>
+            <input type="file" id="file-input" accept="image/*">
+        </div>
+
+        <!-- Image prediction section -->
+        <div class="image-prediction-container">
+            <img id="preview" class="image-preview">
+            <div class="prediction">
+                <span>Prediction:</span>
+                <p id="prediction-text">--</p>
+                <span>Confidence:</span> 
+                <p id="confidence-text">--</p> 
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+
+        // Image upload & model prediction
+        document.getElementById('file-input').addEventListener('change', function (event) {
+
+            // Handling uploaded file
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+
+                // Displaying image preview
+                reader.onload = function (e) {
+                    const img = document.getElementById('preview');
+                    img.src = e.target.result;
+                    img.style.display = 'block';
+
+                    // Updationg & showing prediction & confidence
+                    const predictionText = document.getElementById('prediction-text');
+                    const confidenceText = document.getElementById('confidence-text');
+
+                    predictionText.innerText = "Processing...";
+                    confidenceText.innerText = "Processing...";
+                    
+                    document.querySelector('.prediction').style.display = 'block';
+
+
+                    //Sending image to the server 
+                    const formData = new FormData();
+                    formData.append('file', file);
+
+                    fetch('/predict', {
+                        method: 'POST',
+                        body: formData
+                    })
+
+                        // Handling server response 
+                        .then(response => response.json())
+                        .then(data => {
+                            document.getElementById('prediction-text').innerText = data.prediction;
+                            document.getElementById('confidence-text').innerText = `${(data.confidence * 100).toFixed(2)}%`;
+                        })
+
+                        // Handling errors
+                        .catch(error => {
+                            console.error('Error:', error);
+                            predictionText.innerText = "Error in prediction.";
+                        });
+                };
+
+                // Reading file as data URL 
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Toggling description visibility
+        function toggleDescription(index) {
+            const descriptions = document.querySelectorAll('.description');
+            descriptions[index].style.display = (descriptions[index].style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+
+</html>
