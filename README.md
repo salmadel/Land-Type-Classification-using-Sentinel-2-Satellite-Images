@@ -1,4 +1,4 @@
-# Land-Type-Classification-using-Sentinel-2-Satellite-Images
+# Land-Type-Classification-using-Sentinel-2-Satellite-Images (GeoLens Platform)
 ## Project Overview
 This project aims to classify different land types using **Sentinel-2 satellite images** and **deep 
 learning techniques**. By analyzing RGB satellite imagery, we can accurately identify various 
