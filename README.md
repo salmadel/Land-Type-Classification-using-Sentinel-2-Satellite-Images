@@ -110,8 +110,14 @@ After extensive training and evaluation, the best-performing model achieved:
 ![best curves](https://github.com/user-attachments/assets/78bc3a9e-d126-4399-8738-17848d72f699)
 
 ## License
+• **Dataset License**
 
-The dataset is licensed under the MIT license. In general, Sentinel data is free and open to the public under EU law. Please consider the [Copernicus Sentinel Data Terms and Conditions](https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice) when using Copernicus Sentinel data.
+The Sentinel-2 satellite imagery used in this project is freely available under EU law [(Copernicus Sentinel Data Terms and Conditions)](https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice). Please ensure compliance with these terms when using the data.
+
+
+ • **Code License**
+ 
+ The code used to process and classify the Sentinel-2 data is licensed under the MIT License, which allows you to freely use, modify, and distribute the code, as long as you include the copyright notice.
 
 ## User Interface Test
 
