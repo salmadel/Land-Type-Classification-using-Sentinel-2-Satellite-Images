@@ -1,22 +1,23 @@
 # Land-Type-Classification-using-Sentinel-2-Satellite-Images (GeoLens Platform)
 ## Project Overview
-This project aims to classify different land types using **Sentinel-2 satellite images** and **deep 
-learning techniques**. By analyzing RGB satellite imagery, we can accurately identify various 
-land cover types, such as forests, water bodies, urban areas, and agricultural land. This 
-classification can help in environmental monitoring, urban planning, and sustainable resource 
-management. Our model will be trained using **Convolutional Neural Networks (CNNs)** and 
-pretrained architectures to achieve high accuracy and robustness.
+**GeoLens** is an end-to-end AI platform designed to classify land types using Sentinel-2 satellite imagery and assist users through an AI-powered chatbot. The system combines **Convolutional Neural Networks (CNNs)** for image classification and **Natural Language Processing (NLP)** for real-time user interaction and support.
+
+By analyzing high-resolution RGB satellite images, GeoLens can distinguish between 10 distinct land cover categories such as forests, urban zones, water bodies, and crop types.
+
+GeoLens supports applications in environmental monitoring, urban planning, agriculture, and disaster response, making land analysis fast, interactive, and accessible.
 
 ## Project Objectives
-• **Environmental Monitoring:** Tracks land cover changes over time, aiding in deforestation detection, climate change analysis, and natural disaster assessment.
+• **Environmental Monitoring:** Detect land cover changes and deforestation.
 
-• **Urban Planning:** Helps city planners analyze urban expansion and optimize land use for sustainable infrastructure development.
+• **Urban Planning:** Track urban expansion and optimize infrastructure.
 
-• **Agriculture Management:** Supports crop monitoring, identifies arable land, and enhances resource allocation to improve agricultural yield.
+• **Agriculture Management:** Identify crops and monitor farmland.
 
-• **Disaster Response:** Provides critical insights for disaster management teams to assess affected areas and plan efficient recovery strategies.
+• **Disaster Response:** Assess damaged areas for better recovery planning.
 
-• **Automation and Efficiency:** Reduces manual effort and enhances accuracy in land classification, enabling large-scale and cost-effective analysis.
+• **AI Chatbot Assistance:** Provide interactive support and insights.
+
+• **Automation:** Enable fast and scalable land classification.
 
 ## Team Members
 **1. Dr/** [Mohamed Elsayed Nassar](https://github.com/Mohamed-Nassar88)
@@ -55,44 +56,46 @@ pretrained architectures to achieve high accuracy and robustness.
 
 **2. Data Preprocessing**
 
-• Split data (Train 70%, Validation 10%, Test 20%).
+• Split data (Train 70%, Test 20%, Validation 10%).
 
 • Normalized pixel values and applied data augmentation.
 
-• Resized images to 64×64 pixels.
-
 **3. Model Development & Training**
 
-• Built and trained multiple CNN models with regularization.
+• Built and evaluated multiple **CNN** architectures using **TensorFlow/Keras**.
 
-• Trained using the Adam optimizer with categorical cross-entropy loss and early stopping.
+• Trained using the **Adam optimizer** with **categorical cross-entropy loss** and **early stopping**.
 
 • Selected the best-performing model based on accuracy and F1-score.
 
 **4. Model Deployment**
 
-• Integrated the trained model into a Flask-based web app.
+• Integrated the trained model into a **Flask-based** web app.
 
-• Designed an interactive UI with HTML, CSS, and JavaScript.
+• Designed an interactive UI with **HTML**, **CSS**, and **JavaScript**.
+
+• Enabled users to upload satellite images and receive instant land-type predictions along with a confidence score (%) for better interpretability.
+
+**5. Chatbot Integration**
+
+• Added a smart assistant using **LLaMA 3.2–3B-Instruct** for real-time user support.
+
+• Helps users navigate the platform, understand results, and ask about land types and use cases.
 
 ## Used Technologies
-**1. Programming Languages & Frameworks**
+• **Python:** Core logic and ML modeling
 
-• **Python:** Used for data preprocessing, model training, and backend development.
+• **Flask:** Web server and integration
 
-• **Flask:** Lightweight web framework for deploying the CNN model.
+• **TensorFlow/Keras:** CNN training
 
-• **JavaScript, HTML, CSS:** Used for frontend development and UI design.
+• **OpenCV:** Image processing
 
-**2. Libraries & Tools**
+• **HTML/CSS/JS:** Frontend
 
-• **TensorFlow/Keras:** Deep learning framework for model development.
+• **Hugging Face Transformers:** Chatbot NLP
 
-• **OpenCV:** Image processing and manipulation.
-
-• **NumPy & Pandas:** Data handling and analysis.
-
-• **Seaborn & Matplotlib:** Data visualization and exploratory analysis.
+• **NumPy, Pandas, Matplotlib, Seaborn:** Data analysis & visualization
 
 ## Results
 After extensive training and evaluation, the best-performing model achieved:
@@ -114,7 +117,9 @@ The dataset is licensed under the MIT license. In general, Sentinel data is free
 
 
 
-https://github.com/user-attachments/assets/2cfc7df1-12de-46ab-bdf3-519155fccc36
+https://github.com/user-attachments/assets/81acb2e6-75dd-496b-8ac1-bd4ba7635da9
+
+
 
 
 
