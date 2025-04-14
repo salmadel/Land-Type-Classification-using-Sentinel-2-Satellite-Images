@@ -109,6 +109,13 @@ After extensive training and evaluation, the best-performing model achieved:
 ![best normalize cm](https://github.com/user-attachments/assets/104b7945-5c49-4957-a51c-f40d96bd71c2)
 ![best curves](https://github.com/user-attachments/assets/78bc3a9e-d126-4399-8738-17848d72f699)
 
+
+## User Interface Test
+
+
+
+https://github.com/user-attachments/assets/81acb2e6-75dd-496b-8ac1-bd4ba7635da9
+
 ## License
 • **Dataset License**
 
@@ -118,14 +125,6 @@ The Sentinel-2 satellite imagery used in this project is freely available under 
  • **Code License**
  
  The code used to process and classify the Sentinel-2 data is licensed under the MIT License, which allows you to freely use, modify, and distribute the code, as long as you include the copyright notice.
-
-## User Interface Test
-
-
-
-https://github.com/user-attachments/assets/81acb2e6-75dd-496b-8ac1-bd4ba7635da9
-
-
 
 
 
