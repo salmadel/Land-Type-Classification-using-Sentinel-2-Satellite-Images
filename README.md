@@ -1,23 +1,21 @@
-# Land-Type-Classification-using-Sentinel-2-Satellite-Images (GeoLens Platform)
+# 🌍 GeoLens : Land-Type Classification Using Sentinel-2 Satellite Images
 ## Project Overview
-**GeoLens** is an end-to-end AI platform designed to classify land types using Sentinel-2 satellite imagery and assist users through an AI-powered chatbot. The system combines **Convolutional Neural Networks (CNNs)** for image classification and **Natural Language Processing (NLP)** for real-time user interaction and support.
+**GeoLens** is an AI-driven web platform that utilizes **Convolutional Neural Networks (CNNs)** to classify land cover types from high-resolution Sentinel-2 satellite images. The system accurately identifies one of ten predefined land types—such as forest, water bodies, residential zones, and crop fields—based on RGB imagery.
 
-By analyzing high-resolution RGB satellite images, GeoLens can distinguish between 10 distinct land cover categories such as forests, urban zones, water bodies, and crop types.
+In addition to land classification, GeoLens enhances user experience by integrating a **search agent (via SerpAPI)** that fetches real-time resources and reports related to the predicted land type. Furthermore, if geographic coordinates are available, the platform displays an **interactive map** showing the location of the uploaded image.
 
-GeoLens supports applications in environmental monitoring, urban planning, agriculture, and disaster response, making land analysis fast, interactive, and accessible.
+By combining deep learning with intelligent search and geospatial visualization, GeoLens provides a powerful and accessible tool for applications in **environmental monitoring**, **urban planning**, **agriculture**, and **disaster management**.
 
 ## Project Objectives
-• **Environmental Monitoring:** Detect land cover changes and deforestation.
+• **Environmental Monitoring:** Detect land cover changes, deforestation, and ecosystem shifts.
 
-• **Urban Planning:** Track urban expansion and optimize infrastructure.
+• **Urban Planning:** Monitor urban expansion and support infrastructure optimization.
 
-• **Agriculture Management:** Identify crops and monitor farmland.
+• **Agriculture Management:** Identify crop types and assess farmland conditions.
 
-• **Disaster Response:** Assess damaged areas for better recovery planning.
+• **Disaster Response:** Evaluate affected areas to enhance recovery planning.
 
-• **AI Chatbot Assistance:** Provide interactive support and insights.
-
-• **Automation:** Enable fast and scalable land classification.
+• **Automation:** Deliver fast, scalable, and accurate land classification through deep learning.
 
 ## Team Members
 **1. Dr/** [Mohamed Elsayed Nassar](https://github.com/Mohamed-Nassar88)
@@ -31,6 +29,8 @@ GeoLens supports applications in environmental monitoring, urban planning, agric
 **5. Eng/** [Salma Adel Saleh](https://github.com/salmadel)
 
 ## Dataset
+• [Dataset Link](https://zenodo.org/records/7711810#.ZAm3k-zMKEA)
+
 • **Source:** Sentinel-2 RGB satellite images
 
 • **Total Images:** 27,000
@@ -41,8 +41,6 @@ GeoLens supports applications in environmental monitoring, urban planning, agric
 
 • **Balanced Distribution:** No corrupt or duplicated images
 
-• [Dataset Link](https://zenodo.org/records/7711810#.ZAm3k-zMKEA)
-
 • **Image Samples:**
 ![download (5)](https://github.com/user-attachments/assets/76a77590-77a7-4f5d-8124-35e1ae293458)
 
@@ -50,15 +48,15 @@ GeoLens supports applications in environmental monitoring, urban planning, agric
 ## Project Workflow
 **1. Data Collection & Exploration**
 
-• Collected Sentinel-2 satellite images and analyzed class distribution.
+• Collected and analyzed 27,000 Sentinel-2 RGB satellite images.
 
 • Used EDA to visualize patterns and dataset characteristics.
 
 **2. Data Preprocessing**
 
-• Split data (Train 70%, Test 20%, Validation 10%).
+• Normalized image pixel values.
 
-• Normalized pixel values and applied data augmentation.
+• Split dataset into training (70%), testing (20%), and validation (10%).
 
 **3. Model Development & Training**
 
@@ -70,30 +68,38 @@ GeoLens supports applications in environmental monitoring, urban planning, agric
 
 **4. Model Deployment**
 
-• Integrated the trained model into a **Flask-based** web app.
+• Deployed the trained model in a **Flask-based** platform.
 
 • Designed an interactive UI with **HTML**, **CSS**, and **JavaScript**.
 
-• Enabled users to upload satellite images and receive instant land-type predictions along with a confidence score (%) for better interpretability.
+• Displayed predicted land type with a confidence percentage.
 
-**5. Chatbot Integration**
+**5. Search Agent Integration**
 
-• Added a smart assistant using **LLaMA 3.2–3B-Instruct** for real-time user support.
+• Integrated **SerpAPI** to fetch 2–3 relevant online resources based on the predicted class.
 
-• Helps users navigate the platform, understand results, and ask about land types and use cases.
+• Helps users explore more about the detected land type.
+
+**6. Map Visualization**
+
+• Integrated **Leaflet.js** for dynamic map rendering.
+
+• Displayed image location on the map using geographic coordinates, if available.
 
 ## Used Technologies
-• **Python:** Core logic and ML modeling
+• **Python:** ML & backend logic
 
-• **Flask:** Web server and integration
+• **OpenCV:** Image handling
+
+• **Flask:** Web app backend
 
 • **TensorFlow/Keras:** CNN training
 
-• **OpenCV:** Image processing
+• **HTML/CSS/JS:** Frontend interface
 
-• **HTML/CSS/JS:** Frontend
+• **SerpAPI:** Google search agent integration
 
-• **Hugging Face Transformers:** Chatbot NLP
+• **Leaflet.js:** Map rendering from coordinates
 
 • **NumPy, Pandas, Matplotlib, Seaborn:** Data analysis & visualization
 
@@ -114,7 +120,10 @@ After extensive training and evaluation, the best-performing model achieved:
 
 
 
-https://github.com/user-attachments/assets/81acb2e6-75dd-496b-8ac1-bd4ba7635da9
+
+https://github.com/user-attachments/assets/dff2cba5-9217-48bc-957f-6778ad7a2ad5
+
+
 
 ## License
 • **Dataset License**
