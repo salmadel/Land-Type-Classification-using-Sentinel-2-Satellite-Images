@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoLens</title>
+    <link rel="icon" href="./favicon.jfif" type="image/png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+</head>
+
+<body>
+
+    <!-- Main container -->
+    <div class="container">
+
+        <!-- Title & description-->
+        <h1>GeoLens</h1>
+        <h2>Smart Land Discovery with AI</h2>
+        <p>GeoLens is an AI-powered platform that analyzes satellite images to classify land types with high
+            accuracy.<br>
+            It transforms raw satellite data into actionable insights for agriculture, urban planning, and environmental
+            monitoring, making geospatial analysis smarter and more accessible.</p>
+
+        <!-- Image upload section -->
+        <div class="upload-section">
+            <label for="file-input" class="upload-btn">Upload an Image <i class="fa-solid fa-image"></i></label>
+            <input type="file" id="file-input" accept="image/*">
+        </div>
+
+        <!-- Image prediction section -->
+        <div class="image-prediction-container">
+            <img id="preview" class="image-preview">
+            <div class="prediction">
+                <span>Prediction:</span>
+                <p id="prediction-text">--</p>
+                <span>Confidence:</span>
+                <p id="confidence-text">--</p>
+
+                <!-- Related Links Section -->
+                <div id="related-links-section" class="related-links" style="margin-top: 20px;">
+                    <span>Related Resources:</span>
+                    <ul id="related-links" class="related-links-list"></ul>
+                </div>
+
+                <!-- Map -->
+                 <div>
+                    <span>Location:</span>
+                    <div id="map" style="height: 400px; margin-top: 20px; display: none;"></div>
+                 </div>
+
+
+            </div>
+
+            <script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+
+</html>
