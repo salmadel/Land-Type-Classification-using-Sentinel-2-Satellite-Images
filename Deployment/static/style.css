@@ -1,0 +1,167 @@
+/* Page background & text styling */
+html,
+body {
+    height: 100%;
+    min-height: 130%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #EDE2C7, #b6ae9a);
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Main container styling */
+.container {
+    background-color: white;
+    width: 80%;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 30px;
+    position: relative;
+}
+
+/* Titles styling */
+h1 {
+    color: #6B3F1D;
+    font-family: "Arvo", serif;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 25px;
+    color: #6B3F1D;
+    margin-block: 25px;
+}
+
+/* Text styling */
+p {
+    color: #6B3F1D;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin: 45px 100px;
+    line-height: 1.5;
+}
+
+/* File upload section styling */
+.upload-section {
+    margin-top: 30px;
+}
+
+.upload-btn {
+    border: 2px solid #EDE2C7;
+    color: #6B3F1D;
+    padding: 15px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: #EDE2C7;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    animation: pulse 1.5s infinite;
+}
+
+.upload-btn:hover {
+    background-color: white;
+}
+
+/* Hiding default file input button */
+#file-input {
+    display: none;
+}
+
+/* Displaying image & prediction */
+.image-prediction-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Image preview styling */
+.image-preview {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    border: 2px solid #C3B091;
+    display: none;
+    object-fit: cover;
+}
+
+/* Prediction text styling */
+.prediction {
+    font-size: 20px;
+    font-weight: bold;
+    color: #6B3F1D;
+    display: none;
+    text-align: center;
+    margin-top: -15px;
+}
+
+/* Prediction result styling */
+.prediction span {
+    display: block;
+    font-size: 26px;
+    font-weight: bold;
+    color: #5A3520;
+    margin-block: 15px;
+}
+
+.prediction p {
+    margin: 0;
+    color: #6B3F1D;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.related-links {
+    margin-top: 10px;
+    text-align: none;
+    /* Ensures the content aligns to the left */
+}
+
+.related-links ul {
+    padding-left: 0;
+    /* Remove default padding */
+    list-style-type: none;
+    /* Disc style for the list items */
+    margin-left: 20px;
+    /* Add custom left margin to list */
+}
+
+.related-links li {
+    margin-bottom: 5px;
+    word-wrap: break-word;
+    /* Ensures long words break to fit */
+}
+
+.related-links a {
+    color: #C3B091;
+    /* Set the link color */
+    text-decoration: none;
+    /* Optional: remove underline */
+}
+
+.related-links a:hover {
+    color: #6B3F1D;
+    /* Hover color */
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
